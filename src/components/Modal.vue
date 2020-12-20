@@ -17,7 +17,6 @@
 					/>
 				</v-btn>
 			</template>
-
 			<v-card>
 				<v-toolbar dark color="primary">
 					<v-toolbar-title>준비물 📋</v-toolbar-title>
