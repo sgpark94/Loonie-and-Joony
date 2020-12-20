@@ -1,7 +1,7 @@
 <template>
 	<div class="text-center" data-app style="display: inline-block;">
-		<v-dialog v-model="dialog" width="500">
-			<template v-slot:activator="{ on, attrs }">
+		<v-dialog v-model="dialog" width="500" persistents>
+			<!-- <template v-slot:activator="{ on, attrs }">
 				<v-btn
 					class="ma-2"
 					text
@@ -16,13 +16,13 @@
 						alt="레시피아이콘"
 					/>
 				</v-btn>
-			</template>
+			</template> -->
 			<v-card>
 				<v-toolbar dark color="primary">
 					<v-toolbar-title>준비물 📋</v-toolbar-title>
 					<v-spacer></v-spacer>
 
-					<v-btn icon dark @click="dialog = false">
+					<v-btn icon dark @click="close()">
 						<v-icon>mdi-close</v-icon>
 					</v-btn>
 				</v-toolbar>
@@ -49,16 +49,24 @@
 // import FoodData from "@/data/FoodData.js";
 export default {
 	name: "Modal",
-	props: {
-		recipe: {
-			type: String,
-			default: "",
+	props: {},
+	data() {
+		return {};
+	},
+	computed: {
+		recipe() {
+			console.log(this.$store);
+			return this.$store.state.recipe;
+		},
+		dialog() {
+			return this.$store.state.modalDialog;
 		},
 	},
-	data() {
-		return {
-			dialog: false,
-		};
+	methods: {
+		close() {
+			this.$store.mutations.close();
+			// this.$store.state.modalDialog = false;
+		},
 	},
 };
 </script>

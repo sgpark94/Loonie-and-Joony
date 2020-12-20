@@ -7,16 +7,25 @@
 					<p>{{ eatList.name }}</p>
 					<p>{{ eatList.content }}</p>
 					<div v-if="eatList.is_recipe">
-						<!-- <img
-							src="https://image.flaticon.com/icons/png/512/100/100417.png"
-							alt="레시피아이콘"
-						/> -->
-						<Modal :recipe="eatList.recipe" />
+						<v-btn
+							@click="recipeLoad(eatList.recipe)"
+							class="ma-2"
+							text
+							icon
+							color="red lighten-2"
+							style="width: 16px; height: 16px; margin-left: 5px;"
+						>
+							<img
+								src="https://image.flaticon.com/icons/png/512/100/100417.png"
+								alt="레시피아이콘"
+							/>
+						</v-btn>
 					</div>
 					<br />
 				</div>
 			</div>
 		</template>
+		<Modal />
 	</div>
 </template>
 
@@ -32,6 +41,17 @@ export default {
 	},
 	components: {
 		Modal,
+	},
+	methods: {
+		recipeLoad(eatRecipe) {
+			console.log("Run");
+			// this.$store.commit("set", eatRecipe);
+			this.$store.state.recipe = eatRecipe;
+
+			// console.log($store);
+			this.$store.state.modalDialog = true;
+			// this.$store.commit("open");
+		},
 	},
 };
 </script>
