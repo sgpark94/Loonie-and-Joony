@@ -7,16 +7,17 @@
 					<p>{{ eatList.name }}</p>
 					<p>{{ eatList.content }}</p>
 					<div v-if="eatList.is_recipe">
-						<!-- <img
+						<img
+							@click="load_and_open(eatList.recipe)"
 							src="https://image.flaticon.com/icons/png/512/100/100417.png"
 							alt="레시피아이콘"
-						/> -->
-						<Modal :recipe="eatList.recipe" />
+						/>
 					</div>
 					<br />
 				</div>
 			</div>
 		</template>
+		<Modal :recipe="data" :modaldialog="dialog" />
 	</div>
 </template>
 
@@ -28,10 +29,18 @@ export default {
 	data() {
 		return {
 			FoodData,
+			dialog: false,
+			data: "",
 		};
 	},
 	components: {
 		Modal,
+	},
+	methods: {
+		load_and_open(recipe) {
+			this.dialog = true;
+			this.data = recipe;
+		},
 	},
 };
 </script>

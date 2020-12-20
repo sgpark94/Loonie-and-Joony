@@ -1,6 +1,6 @@
 <template>
 	<div class="text-center" data-app style="display: inline-block;">
-		<v-dialog v-model="dialog" width="500">
+		<v-dialog v-model="modaldialog" width="500">
 			<template v-slot:activator="{ on, attrs }">
 				<v-btn
 					class="ma-2"
@@ -50,6 +50,10 @@
 export default {
 	name: "Modal",
 	props: {
+		modaldialog: {
+			type: Boolean,
+			default: false,
+		},
 		recipe: {
 			type: String,
 			default: "",
