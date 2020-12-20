@@ -21,6 +21,7 @@
 				<v-toolbar dark color="primary">
 					<v-toolbar-title>준비물 📋</v-toolbar-title>
 					<v-spacer></v-spacer>
+
 					<v-btn icon dark @click="dialog = false">
 						<v-icon>mdi-close</v-icon>
 					</v-btn>
@@ -28,9 +29,7 @@
 				<v-card-title class="headline grey lighten-2">&nbsp;</v-card-title>
 
 				<v-card-text>
-					<p v-for="(prepareList, idx) in Preparation.lists" :key="idx">
-						{{ prepareList.list }}
-					</p>
+					<p>{{ recipe }}</p>
 				</v-card-text>
 
 				<v-divider></v-divider>
@@ -47,12 +46,17 @@
 </template>
 
 <script>
-import Preparation from "@/data/Preparation.js";
+// import FoodData from "@/data/FoodData.js";
 export default {
 	name: "Modal",
+	props: {
+		recipe: {
+			type: String,
+			default: "",
+		},
+	},
 	data() {
 		return {
-			Preparation,
 			dialog: false,
 		};
 	},

@@ -5,13 +5,13 @@
 				<p>{{ list.date }}</p>
 				<div v-for="(eatList, i) in list.eatingList" :key="i">
 					<p>{{ eatList.name }}</p>
+					<p>{{ eatList.content }}</p>
 					<div v-if="eatList.is_recipe">
-						<span>{{ eatList.content }}</span>
 						<!-- <img
 							src="https://image.flaticon.com/icons/png/512/100/100417.png"
 							alt="레시피아이콘"
 						/> -->
-						<Modal />
+						<Modal :recipe="eatList.recipe" />
 					</div>
 					<br />
 				</div>
