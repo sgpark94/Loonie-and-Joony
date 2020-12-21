@@ -10,6 +10,7 @@
 					v-bind="attrs"
 					v-on="on"
 					style="width: 16px; height: 16px; margin-left: 5px;"
+					v-show="false"
 				>
 					<img
 						src="https://image.flaticon.com/icons/png/512/100/100417.png"

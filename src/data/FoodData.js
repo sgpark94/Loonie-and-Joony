@@ -4,9 +4,17 @@ export default {
 	foodList: [
 		// 4
 		{
+			id: 123,
 			date: "2020-12-24",
 			eatingList: [
 				{
+					id: 234,
+					name: "점심",
+					content: "in 아웃백 스테이크 하우스",
+					is_recipe: false,
+				},
+				{
+					id: 234,
 					name: "점심",
 					content: "in 아웃백 스테이크 하우스",
 					is_recipe: false,

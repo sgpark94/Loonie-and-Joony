@@ -3,12 +3,14 @@
 		<template v-for="(list, idx) in FoodData.foodList">
 			<div class="content" :key="idx">
 				<p>{{ list.date }}</p>
-				<div v-for="(eatList, i) in list.eatingList" :key="i">
-					<p>{{ eatList.name }}</p>
-					<p>{{ eatList.content }}</p>
-					<div v-if="eatList.is_recipe">
+				<div v-for="(eatItem, i) in list.eatingList" :key="i">
+					<!-- {{ eatingList[i].name }} -->
+					<!-- {{ eatItem }} -->
+					<p>{{ eatItem.name }}</p>
+					<p>{{ eatItem.content }}</p>
+					<div v-if="eatItem.is_recipe">
 						<img
-							@click="load_and_open(eatList.recipe)"
+							@click="load_and_open(eatItem.recipe)"
 							src="https://image.flaticon.com/icons/png/512/100/100417.png"
 							alt="레시피아이콘"
 						/>
@@ -37,9 +39,9 @@ export default {
 		Modal,
 	},
 	methods: {
-		load_and_open(recipe) {
+		load_and_open(eatRecipe) {
 			this.dialog = true;
-			this.data = recipe;
+			this.data = eatRecipe;
 		},
 	},
 };
