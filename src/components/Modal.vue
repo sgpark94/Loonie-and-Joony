@@ -19,7 +19,7 @@
 			</template> -->
 			<v-card>
 				<v-toolbar dark color="primary">
-					<v-toolbar-title>준비물 📋</v-toolbar-title>
+					<v-toolbar-title>Material 📋</v-toolbar-title>
 					<v-spacer></v-spacer>
 
 					<v-btn icon dark @click="close()">

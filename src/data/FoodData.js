@@ -7,9 +7,10 @@ export default {
 			date: "2020-12-24",
 			eatingList: [
 				{
-					name: "점심",
-					content: "in 아웃백 스테이크 하우스",
-					is_recipe: false,
+					name: "Lunch",
+					content: "in Outback Steak-House",
+					imageURL: "@/assets/images/main0.jpg",
+					is_recipe: false
 				},
 			],
 		},
@@ -17,16 +18,18 @@ export default {
 			date: "2020-12-25",
 			eatingList: [
 				{
-					name: "점심",
-					content: "in 상현역 근방 식당",
-					is_recipe: false,
+					name: "Lunch",
+					content: "near Sanghyeon Station",
+					imageURL: "@/assets/images/main1.jpg",
+					is_recipe: false
 				},
 				{
-					name: "저녁",
-					content: "화로구이",
+					name: "Dinner",
+					content: "Grilled brazier",
+					imageURL: "@/assets/images/main2.jpg",
 					is_recipe: true,
 					recipe:
-						"⛽연료, 🧫화로, 🍆가지, 양파, 마늘, 🍄양송이, 🍍파인애플, 🥩고기, 🥂담금주",
+						"⛽연료, \n🧫화로, 🍆가지, 양파, 마늘, 🍄양송이, 🍍파인애플, 🥩고기, 🥂담금주",
 				},
 			],
 		},
@@ -34,20 +37,23 @@ export default {
 			date: "2020-12-26",
 			eatingList: [
 				{
-					name: "아침",
-					content: "브런치",
+					name: "Breakfast",
+					content: "Branch",
+					imageURL: "@/assets/images/main3.jpg",
 					is_recipe: true,
 					recipe: "🍳달걀, 🥛우유, 🥖빵, 🥓베이컨",
 				},
 				{
-					name: "점심",
-					content: "감바스, 알료올료",
-					is_recipe: true,
+					name: "Lunch",
+					content: "Gambas, Alio Olio (Pasta)",
+					imageURL: "@/assets/images/main4.jpg",
+					is_recipe: true
 				},
 				{
-					name: "저녁",
-					content: "모듬전",
-					is_recipe: true,
+					name: "Dinner",
+					content: "Korea pancake (kimchi, mushroom, etc)",
+					imageURL: "@/assets/images/main5.jpg",
+					is_recipe: true
 				},
 			],
 		},
@@ -55,14 +61,16 @@ export default {
 			date: "2020-12-27",
 			eatingList: [
 				{
-					name: "아침",
-					content: "브런치",
-					is_recipe: true,
+					name: "Breakfast",
+					content: "Branch",
+					imageURL: "@/assets/images/main6.jpg",
+					is_recipe: true
 				},
 				{
-					name: "점심",
-					content: "제육쌈밥",
-					is_recipe: true,
+					name: "Lunch",
+					content: "Stir-fried spicy pork + Ssambap",
+					imageURL: "@/assets/images/main7.jpg",
+					is_recipe: true
 				},
 			],
 		},
