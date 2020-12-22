@@ -22,7 +22,7 @@
 					<v-toolbar-title>Material 📋</v-toolbar-title>
 					<v-spacer></v-spacer>
 
-					<v-btn icon dark @click="close()">
+					<v-btn icon dark @click="modalClose()">
 						<v-icon>mdi-close</v-icon>
 					</v-btn>
 				</v-toolbar>
@@ -55,7 +55,6 @@ export default {
 	},
 	computed: {
 		recipe() {
-			console.log(this.$store);
 			return this.$store.state.recipe;
 		},
 		dialog() {
@@ -63,9 +62,9 @@ export default {
 		},
 	},
 	methods: {
-		close() {
-			this.$store.mutations.close();
-			// this.$store.state.modalDialog = false;
+		modalClose() {
+			this.$store.commit("close");
+			this.$store.state.modalDialog = false;
 		},
 	},
 };

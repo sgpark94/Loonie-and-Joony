@@ -39,6 +39,7 @@
 					style="margin: 30px auto 30px;"
 					class="mx-auto mb-2"
 					max-width="70%"
+					min-width="320px"
 				>
 					<div>
 						<v-img
@@ -48,7 +49,7 @@
 						>
 						</v-img>
 						<v-card-title>
-							{{ eatItem.content }}
+							<span>{{ eatItem.content }}</span>
 
 							<span v-if="eatItem.is_recipe">
 								<v-btn
@@ -57,7 +58,6 @@
 									text
 									icon
 									color="red lighten-2"
-									style="width: 16px; height: 16px; margin-left: 5px"
 								>
 									<img
 										src="https://image.flaticon.com/icons/png/512/100/100417.png"
@@ -68,13 +68,6 @@
 						<v-card-subtitle class="pb-0"
 							>{{ list.date }} {{ eatItem.name }}</v-card-subtitle
 						>
-
-						<!-- <v-card-text class="text--primary">
-            <div>Whitehaven Beach</div>
-
-			<div>Whitsunday Island, Whitsunday Islands</div>
-            {{ eatItem.name }}
-          </v-card-text> -->
 					</div>
 				</v-card>
 			</div>
@@ -123,11 +116,11 @@ export default {
 	font-weight: 700;
 }
 span {
+	display: inline-block;
 	vertical-align: top;
 }
 img {
-	width: 16px;
-	margin-left: 5px;
+	width: 19px;
 	vertical-align: top;
 	cursor: pointer;
 }
