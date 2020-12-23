@@ -1,6 +1,6 @@
 <template>
 	<div class="text-center" data-app style="display: inline-block;">
-		<v-dialog v-model="dialog" width="500" persistents>
+		<v-dialog v-model="dialog" width="500" persistent>
 			<!-- <template v-slot:activator="{ on, attrs }">
 				<v-btn
 					class="ma-2"
